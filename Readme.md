@@ -35,5 +35,11 @@ successful.
 * Navigation mode - player can run around freely, interact with objects - press buttons, open doors, equip/ use
   tools.
 
+### Todo
+
+- [ ] study character controller.
+- [ ] implement objects interaction.
+- [ ] implement driving mode manipulating the character controller.
+
 ![](res/Train_00_alternative.gif)
 ![](res/Train_00.gif)
