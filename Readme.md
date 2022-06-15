@@ -34,3 +34,6 @@ successful.
   ability to look around.
 * Navigation mode - player can run around freely, interact with objects - press buttons, open doors, equip/ use
   tools.
+
+![](raw/train_00_alternative.gif)
+![](raw/train_00.gif)
