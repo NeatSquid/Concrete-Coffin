@@ -49,6 +49,7 @@ ExportedObj/
 *.blend1
 *.blend2
 *.blend3
+*.psd
 
 # Unity3D generated meta files
 *.pidb.meta
