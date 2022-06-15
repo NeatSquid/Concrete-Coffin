@@ -35,5 +35,5 @@ successful.
 * Navigation mode - player can run around freely, interact with objects - press buttons, open doors, equip/ use
   tools.
 
-![](raw/train_00_alternative.gif)
-![](raw/train_00.gif)
+![](res/Train_00_alternative.gif)
+![](res/Train_00.gif)
