@@ -30,16 +30,17 @@ successful.
 ### Dev Notes
 
 * Interior and exterior of the train should be separate scenes.
-* Driving mode should feel like a basic train simulator - player can only manipulate control handles, probably with
-  ability to look around.
-* Navigation mode - player can run around freely, interact with objects - press buttons, open doors, equip/ use
-  tools.
+* Navigation mode - player can run around freely, interact with objects - press buttons, open doors, equip & use
+  tools. Interacting with TriggerDriveMode object switches player to driving mode.
+* Driving mode should feel like a basic train simulator - by moving the mouse around camera slightly tilts, player can
+  interact with objects on the dashboard. To switch back to navigation player just presses interact button again.
 
 ### Todo
 
 - [ ] study character controller.
-- [ ] implement objects interaction.
+- [x] implement objects interaction.
 - [ ] implement driving mode manipulating the character controller.
+- [ ] add a CRT screen to the dashboard to display information like wheels slipping, battery charge etc.
 
 ![](res/Train_00_alternative.gif)
 ![](res/Train_00.gif)
