@@ -39,6 +39,7 @@ successful.
 
 - [ ] study character controller.
 - [x] implement objects interaction.
+- [ ] **practical** object interaction implementation.
 - [ ] implement driving mode manipulating the character controller.
 - [ ] add a CRT screen to the dashboard to display information like wheels slipping, battery charge etc.
 
