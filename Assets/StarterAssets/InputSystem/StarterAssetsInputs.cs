@@ -10,6 +10,7 @@ namespace StarterAssets
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
+		public Vector2 drag; //custom drag pointer position
 		public bool jump;
 		public bool sprint;
 
@@ -21,6 +22,18 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+		#region custom drag input
+		private void OnDrag(InputValue value) //custom
+		{
+			DragInput(value.Get<Vector2>());
+		}
+		
+		private void DragInput(Vector2 newDragDirection) //custom
+		{
+			drag = newDragDirection;
+		}
+		
+		#endregion
 		public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
