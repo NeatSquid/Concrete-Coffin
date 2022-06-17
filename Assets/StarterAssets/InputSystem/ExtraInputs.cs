@@ -35,6 +35,15 @@ public partial class @ExtraInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""86c4d39c-f7a8-49e3-9732-55c38813b841"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @ExtraInputs : IInputActionCollection2, IDisposable
                     ""action"": ""Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b73a5808-c983-4ad4-988e-591a93ed32d6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @ExtraInputs : IInputActionCollection2, IDisposable
         // Extra Input Map
         m_ExtraInputMap = asset.FindActionMap("Extra Input Map", throwIfNotFound: true);
         m_ExtraInputMap_Grab = m_ExtraInputMap.FindAction("Grab", throwIfNotFound: true);
+        m_ExtraInputMap_Interact = m_ExtraInputMap.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -117,11 +138,13 @@ public partial class @ExtraInputs : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_ExtraInputMap;
     private IExtraInputMapActions m_ExtraInputMapActionsCallbackInterface;
     private readonly InputAction m_ExtraInputMap_Grab;
+    private readonly InputAction m_ExtraInputMap_Interact;
     public struct ExtraInputMapActions
     {
         private @ExtraInputs m_Wrapper;
         public ExtraInputMapActions(@ExtraInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Grab => m_Wrapper.m_ExtraInputMap_Grab;
+        public InputAction @Interact => m_Wrapper.m_ExtraInputMap_Interact;
         public InputActionMap Get() { return m_Wrapper.m_ExtraInputMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -134,6 +157,9 @@ public partial class @ExtraInputs : IInputActionCollection2, IDisposable
                 @Grab.started -= m_Wrapper.m_ExtraInputMapActionsCallbackInterface.OnGrab;
                 @Grab.performed -= m_Wrapper.m_ExtraInputMapActionsCallbackInterface.OnGrab;
                 @Grab.canceled -= m_Wrapper.m_ExtraInputMapActionsCallbackInterface.OnGrab;
+                @Interact.started -= m_Wrapper.m_ExtraInputMapActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_ExtraInputMapActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_ExtraInputMapActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_ExtraInputMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -141,6 +167,9 @@ public partial class @ExtraInputs : IInputActionCollection2, IDisposable
                 @Grab.started += instance.OnGrab;
                 @Grab.performed += instance.OnGrab;
                 @Grab.canceled += instance.OnGrab;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -148,5 +177,6 @@ public partial class @ExtraInputs : IInputActionCollection2, IDisposable
     public interface IExtraInputMapActions
     {
         void OnGrab(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
