@@ -43,5 +43,5 @@ successful.
 - [ ] implement driving mode manipulating the character controller.
 - [ ] add a CRT screen to the dashboard to display information like wheels slipping, battery charge etc.
 
-![](res/Train_00_alternative.gif)
-![](res/Train_00.gif)
+![](Assets/RawAss/Train_00_alternative.gif)
+![](Assets/RawAss/Train_00.gif)
