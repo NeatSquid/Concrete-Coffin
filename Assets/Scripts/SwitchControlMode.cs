@@ -1,7 +1,7 @@
 using StarterAssets;
 using UnityEngine;
 
-public class ControlModeSwitcher : MonoBehaviour
+public class SwitchControlMode : MonoBehaviour
 {
     [SerializeField] private FirstPersonController _controller;
     [SerializeField] private GameObject _driveCam;

@@ -1,7 +1,7 @@
 using StarterAssets;
 using UnityEngine;
 
-public class InteractionControl : MonoBehaviour
+public class InteractionDrive : MonoBehaviour
 {
     private ExtraInputs _extraInputs;
 
@@ -14,7 +14,7 @@ public class InteractionControl : MonoBehaviour
     [SerializeField] [Range(1f, 10f)] private float _sensitivity = 2f;
 
     [SerializeField] private bool _mouseOver;
-    [SerializeField] private bool _manipulating;
+    [SerializeField] public bool _manipulating;
 
     private void Awake()
     {
@@ -41,7 +41,7 @@ public class InteractionControl : MonoBehaviour
 
     private void SetThrottleAnim(float amount)
     {
-        _animator.SetFloat("throttle", amount);
+        _animator.SetFloat("value", amount);
     }
 
     private void Update()
