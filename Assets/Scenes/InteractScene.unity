@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 702571846}
   - component: {fileID: 702571845}
   - component: {fileID: 702571849}
+  - component: {fileID: 702571850}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -505,6 +506,18 @@ MonoBehaviour:
   _camTransfrom: {fileID: 53014326}
   _edgeOffset: 1
   _turn: {x: 0, y: 0}
+--- !u!114 &702571850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702571844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13f54b591a50184fab1f831ed005aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1058791193
 GameObject:
   m_ObjectHideFlags: 0
