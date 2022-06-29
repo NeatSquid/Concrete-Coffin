@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b910bd9876d041e4a8d3e8261f80211d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _drive: {fileID: 0}
+  _drive: {fileID: 1342198576}
   _inputs: {fileID: 1823237908}
   _camera: {fileID: 1747386175}
   mouseViewportSpace: {x: 0, y: 0}
@@ -2085,6 +2085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933792168}
+  - component: {fileID: 1933792169}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2107,6 +2108,19 @@ Transform:
   m_Father: {fileID: 212336280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933792169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933792166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa224b1781abee488d8da9bc2f61024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
 --- !u!1 &2032568951
 GameObject:
   m_ObjectHideFlags: 0
