@@ -20,14 +20,14 @@ oppressive environment.
 In Iron lung the player performs the task of navigating the vehicle to set point with a promise of freedom if
 successful.
 
-### Under
+### Coffin
 
 * Riding these tracks long enough one can be forgiven for believing these narrow underground tunnels are stretching
   forever. Remember to drive the locomotive efficiently on unpowered sections. The old batteries run out of juice almost
   immediately. If you run out of backup power and your locomotive have stopped consider yourself lost.
 * Your goal is Station Terminal Alpha. Reach it by any means. Deliver the cargo.
 
-### Dev Notes
+### Notes
 
 * Interior and exterior of the train should be separate scenes.
 * Navigation mode - player can run around freely, interact with objects - press buttons, open doors, equip & use
